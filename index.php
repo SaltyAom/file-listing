@@ -15,10 +15,10 @@
     <meta name="author" content="Mystia Project" />
 
     <!-- Open Graph -->
-    <link rel="canonical" href="https://www.mystia-project.com/raitosuki%202">
-    <meta name="og:title" content="Raitosuki 2">
+    <link rel="canonical" href="https://www.mystia-project.com/fileListing">
+    <meta name="og:title" content="File Listing">
     <meta name="og:description" content="Complete file listing powered by simple PHP">
-    <meta property="og:image" content="https://www.mystia-project.com/raitosuki%202/flandre.png">
+    <meta property="og:image" content="https://www.mystia-project.com/fileListing/Flandre.png">
     <meta property="og:image:width" content="512" />
     <meta property="og:image:height" content="512" />
     <meta property="og:locale" content="en_US" />
@@ -27,9 +27,9 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:description" content="Complete file listing powered by simple PHP" />
-    <meta name="twitter:title" content="Raitosuki 2" />
+    <meta name="twitter:title" content="File Listing" />
     <meta name="twitter:site" content="@aomkirby1231" />
-    <meta name="twitter:image" content="https://www.mystia-project.com/raitosuki%202/flandre.png" />
+    <meta name="twitter:image" content="https://www.mystia-project.com/fileListing/flandre.png" />
     <meta name="twitter:creator" content="@aomkirby1231" />
 
     <!-- Web App -->
@@ -44,7 +44,7 @@
     <meta name="msapplication-tooltip" content="Complete file listing powered by simple PHP">
 
     <!-- Apple Web App -->
-    <link rel="apple-touch-icon" href="img/nTaskX512.jpg">
+    <link rel="apple-touch-icon" href="img/Flandre.jpg">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="nTask">
@@ -63,14 +63,6 @@
     <div id="directory-container">
         <p id="directory">File Listing</p>
         <div id="directory-wrapper">
-            <div class="tab">
-                <img class="icon icon-file" src="img/file.svg">
-                Hello
-            </div>
-            <div class="tab">
-                <img class="icon icon-folder" src="img/folder.svg">
-                Folder
-            </div>
         </div>
     </div>
 </div>
