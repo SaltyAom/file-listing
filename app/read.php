@@ -36,7 +36,7 @@
     
     $prevDir = rtrim($currentDir,"/");
     if($returnValue == 1){ $prevDir = strrev(strstr(strrev($prevDir),"/")); }
-    if($initDir != $initDir.$currentDir && $currentDir != "/"){
+    if($initDir != $initDir.$currentDir && $currentDir != "/" && $prevDir != "/"){
         echo "
         <div class='tab folder' dir='$prevDir' returnvalue='1'>
             <img class='icon icon-folder' src='img/folder.svg'>
@@ -44,6 +44,7 @@
         </div>";
     }    
     if($returnValue == 0){
+        $newDir = "";
         if($currentDir == ""){
             $readDir = scandir($initDir,2);
         } else {
@@ -61,6 +62,7 @@
     } else {
         if($currentDir == "" || $currentDir == $initDir || $currentDir == "/"){
             $readDir = scandir($initDir,2);
+            $newDir = "";
         } else {
             $newDir = rtrim(strrev(strstr(strrev($prevDir),"/")),"/");
             $readDir = scandir("$initDir/$prevDir",2);
