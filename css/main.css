@@ -1,0 +1,77 @@
+@font-face {
+    font-family:"Somatic";
+    src:url("../fonts/Somatic-Rounded.otf"); }
+* {
+    color:#007bff;
+    font-family:"Somatic";
+    font-weight: lighter;
+    box-sizing: border-box; }
+::-webkit-scrollbar {
+    background-color:#fff;
+    width:7px;
+    height:7px; }
+::-webkit-scrollbar-thumb {
+    background-color:#007bff;
+    border-radius:7px; }
+::selection, ::-webkit-selection {
+    background-color:rgba(0,0,0,0.1);
+}
+body {margin:0;}
+a {text-decoration:none;}
+#container {
+    display:block;
+    width:100%;
+    padding:30px 10%;}
+#background {
+    position:fixed;
+    z-index:-2;
+    width:100%;
+    height:100vh;
+    background-image:url("../img/sky.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; }
+#overlay {
+    position:fixed;
+    z-index:-1;
+    width:100%;
+    height:100vh;
+    /* background-color:rgba(0,0,0,0.175); */ }
+#directory-container {
+    display:block;
+    width:100%;
+    /* background-color:rgba(0,0,0,0.15); */
+    font-size:20px;
+    padding:10px 15px; }
+#directory-container::after {
+    display:block;
+    clear:both;
+    content:""; }
+.tab {
+    display:block;
+    padding:9px 10px;
+    cursor:pointer;
+    font-size:24px;
+    border-bottom:1px solid #ccc; }
+.tab:hover {background-color:rgba(0,0,0,0.05);}
+.tab:last-child { border-bottom:0; }
+.icon {
+    fill:#007bff !important;
+    float:left;
+    margin-right:10px; }
+.icon-file {
+    margin-right:16px;
+    width:17px;
+    padding:2px 0; }
+.icon-folder {
+    width:24px;
+    padding:3px 0; }
+#directory {
+    color:#007bff;
+    margin:10px;
+    text-decoration: underline;
+    cursor:default; }
+#directory-wrapper {
+    display:block;
+    width:100%;
+}
