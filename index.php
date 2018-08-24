@@ -40,14 +40,14 @@
     <meta name="mssmarttagspreventparsing" content="true">
     <meta name="msapplication-window" content="width=800;height=600"> 
     <meta name="msapplication-navbutton-color" content="#007bff">
-    <meta name="application-name" content="nTask">
+    <meta name="application-name" content="file Listing">
     <meta name="msapplication-tooltip" content="Complete file listing powered by simple PHP">
 
     <!-- Apple Web App -->
     <link rel="apple-touch-icon" href="img/Flandre.jpg">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="nTask">
+    <meta name="apple-mobile-web-app-title" content="File Listing">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name='format-detection' content='telephone=no'>
 
