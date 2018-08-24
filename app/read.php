@@ -12,7 +12,7 @@
     function fileTab($initDir,$currentDir,$value){
         echo "
         <div class='tab file' dir='$currentDir/$value'>
-            <a href='$initDir/$currentDir/$value'>
+            <a class='file-dir' href='$initDir/$currentDir/$value'>
                 <img class='icon icon-file' src='img/file.svg'>
                 $value
             </a>
