@@ -1,15 +1,15 @@
 # File-listing
-An simple PHP script to create file listing with jQuery, AJAX.
+An simple PHP script to create file listing with AJAX.
 
 ![Example](https://raw.githubusercontent.com/aomkirby123/file-listing/master/screenshot/Example.jpg)
 For live demo visit [https://www.mystia-project.com/file%20listing]
 
 ## Instruction
-File listing is an open-source project for setting up directory listing on open-website, powered by PHP and jQuery with AJAX.
+File listing is an open-source project for setting up directory listing on open-website, powered by PHP with AJAX.
 Written with simple PHP script, with instruction in, only need to edit some line and everything will work perfectly.
 
 ## TL;DR
-This is file-listing open-source project powered by PHP, jQuery, AJAX.
+This is file-listing open-source project powered by PHP, AJAX.
 
 ## Getting start
 Clone the repository and deploy as folder into web server, make sure web server is supported atleast PHP5.
