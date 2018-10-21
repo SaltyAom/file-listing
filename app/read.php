@@ -46,9 +46,9 @@
     if($returnValue == 0){
         $newDir = "";
         if($currentDir == ""){
-            $readDir = scandir($initDir,2);
+            $readDir = scandir($initDir);
         } else {
-            $readDir = scandir("$initDir/$currentDir",2);
+            $readDir = scandir("$initDir/$currentDir");
         }
         foreach($readDir as $key => $value){
             if($value != "." && ($value != ".." && $currentDir != $initDir)){
@@ -61,11 +61,11 @@
         }
     } else {
         if($currentDir == "" || $currentDir == $initDir || $currentDir == "/"){
-            $readDir = scandir($initDir,2);
+            $readDir = scandir($initDir);
             $newDir = "";
         } else {
             $newDir = rtrim(strrev(strstr(strrev($prevDir),"/")),"/");
-            $readDir = scandir("$initDir/$prevDir",2);
+            $readDir = scandir("$initDir/$prevDir");
         }
         foreach($readDir as $key => $value){
             if($value != "." && ($value != ".." && $currentDir != $initDir)){
