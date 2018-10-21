@@ -76,3 +76,20 @@ a.file-dir {display:block;width:100%;}
     display:block;
     width:100%;
 }
+@media screen and (max-width: 567.8px){
+    #container {
+        padding: 30px 2.5%;
+    }
+}
+
+@media screen and (min-width:568px) and (max-width:767.8px){
+    #container {
+        padding: 30px 3.75%;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1366px){
+    #container {
+        padding: 30px 6.25%;
+    }
+}
