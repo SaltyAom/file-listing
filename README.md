@@ -27,9 +27,30 @@ For safety the file-listing couldn't go outside the set $initDir, meaning this c
 ## Compatibility
 List of compatibility to use this project.
 
-* PHP5 or newer
-* jQuery 1.12.4 (Or jQuery 1.5 or newer)
-* JavaScript (Vanilla)
+* PHP 5.6+ installed
+* JavaScript must enable
+
+## Browser Support
+For using XMLHttpRequest (AJAX), it is best to use in:
+
+##### Best Practice
+* Internet Edge: 12+
+* Firefox: 12+
+* Chrome: 31+
+* Opera: 18+
+* Safari: 7.1+
+* iOS Safari: 8+
+* Opera mini: All
+* Android Browser: 4.4.4+
+* Opera Mobile: 46+
+* Chrome for android: All
+* Firefox for android: All
+* UC Browser for Android: All
+* Samsung Internet: All
+* QQ Browser: 1.2+
+* Baidu Browser: 7.12+
+
+#### tl;dr: It's supported in all browser except Internet Explorer.
 
 ## Developer
 * [aomkirby123](https://www.github.com/aomkirby123) - Developer of this project.
