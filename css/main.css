@@ -53,6 +53,7 @@ a.file-dir {display:block;width:100%;}
     padding:9px 10px;
     cursor:pointer;
     font-size:24px;
+    animation: fade 0.35s ease-out 0s 1;
     border-bottom:1px solid #ccc; }
 .tab:hover {background-color:rgba(0,0,0,0.05);}
 .tab:last-child { border-bottom:0; }
@@ -75,6 +76,10 @@ a.file-dir {display:block;width:100%;}
 #directory-wrapper {
     display:block;
     width:100%;
+}
+@keyframes fade {
+    from {opacity:0;}
+    to {opacity:1;}
 }
 @media screen and (max-width: 567.8px){
     #container {

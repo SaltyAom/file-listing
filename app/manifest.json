@@ -1,0 +1,24 @@
+{"dir" : "ltr",
+    "lang" : "de",
+    "name" : "file Listing",
+    "scope" : "../",
+    "display" : "standalone",
+    "start_url" : "../",
+    "short_name" : "file Listing",
+    "theme_color" : "#ffffff",
+    "description" : "Complete file listing powered by simple PHP",
+    "orientation" : "any",
+    "background_color" : "#ffffff",
+    "related_applications" : "",
+    "prefer_related_applications" : "false",
+    "icons" : [
+        {
+            "src": "../img/mystia-projX192.min.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "../img/mystia-proj.min.png",
+            "sizes": "512x512"
+        }
+    ]
+}

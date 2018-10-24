@@ -1,6 +1,7 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html amp>
 <head>
+    <meta charset="utf-8">
     <title>File listing</title>
 
     <!-- Initialize -->
@@ -11,6 +12,7 @@
     <!-- Search Engine -->
     <link rel="icon" href="img/mystia-projX192.min.png">
     <link rel="shortcut icon" href="img/mystia-projX192.min.png">
+    <meta name="title" content="File Listing">
     <meta name="description" content="Complete file listing powered by simple PHP">
     <meta name="author" content="Mystia Project">
 
@@ -35,6 +37,7 @@
     <!-- Web App -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#007bff">
+    <link rel="manifest" href="app/manifest.json">
 
     <!-- MS Web App -->
     <meta name="mssmarttagspreventparsing" content="true">
@@ -51,12 +54,100 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name='format-detection' content='telephone=no'>
 
+    <!-- AMP -->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
     <!-- Local Component -->
-    <style>
-    #background,#overlay{position:fixed;height:100vh;width:100%}#directory,*{color:#007bff}@font-face{font-family:Somatic;src:url(fonts/Somatic-Rounded.otf)}*{font-family:Somatic;font-weight:lighter;box-sizing:border-box}::-webkit-scrollbar{background-color:#fff;width:7px;height:7px}::-webkit-scrollbar-thumb{background-color:#007bff;border-radius:7px}::-webkit-selection,::selection{background-color:rgba(0,0,0,.1)}body{margin:0}a{text-decoration:none}a.file-dir{display:block;width:100%}#container{display:block;width:100%;padding:30px 10%}#background{z-index:-2;background-image:url(../img/sky.jpg);background-size:cover;background-position:center;background-repeat:no-repeat}#overlay{z-index:-1}#directory-container{display:block;width:100%;font-size:20px;padding:10px 15px}#directory-container::after{display:block;clear:both;content:""}.tab{display:block;padding:9px 10px;cursor:pointer;font-size:24px;border-bottom:1px solid #ccc}.tab:hover{background-color:rgba(0,0,0,.05)}.tab:last-child{border-bottom:0}.icon{fill:#007bff!important;float:left;margin-right:10px}.icon-file{margin-right:16px;width:17px;padding:2px 0}.icon-folder{width:24px;padding:3px 0}#directory{margin:10px;text-decoration:underline;cursor:default}#directory-wrapper{display:block;width:100%}@media screen and (max-width:567.8px){#container{padding:30px 2.5%}}@media screen and (min-width:568px) and (max-width:767.8px){#container{padding:30px 3.75%}}@media screen and (min-width:768px) and (max-width:1366px){#container{padding:30px 6.25%}}
+    <style amp-custom>
+    @font-face {
+        font-family:"Somatic";
+        src:url("fonts/Somatic-Rounded.otf"); }
+    * {
+        color:#007bff;
+        font-family:"Somatic";
+        font-weight: lighter;
+        box-sizing: border-box; }
+    ::-webkit-scrollbar {
+        background-color:#fff;
+        width:7px;
+        height:7px; }
+    ::-webkit-scrollbar-thumb {
+        background-color:#007bff;
+        border-radius:7px; }
+    ::selection, ::-webkit-selection {
+        background-color:rgba(0,0,0,0.1);
+    }
+    body {margin:0;}
+    a {text-decoration:none;}
+    a.file-dir {display:block;width:100%;}
+    #container {
+        display:block;
+        width:100%;
+        padding:30px 10%;}
+    #directory-container {
+        display:block;
+        width:100%;
+        /* background-color:rgba(0,0,0,0.15); */
+        font-size:20px;
+        padding:10px 15px; }
+    #directory-container::after {
+        display:block;
+        clear:both;
+        content:""; }
+    .tab {
+        display:block;
+        padding:9px 10px;
+        cursor:pointer;
+        font-size:24px;
+        animation: fade 0.35s ease-out 0s 1;
+        border-bottom:1px solid #ccc; }
+    .tab:hover {background-color:rgba(0,0,0,0.05);}
+    .tab:last-child { border-bottom:0; }
+    .icon {
+        fill:#007bff !important;
+        float:left;
+        margin-right:10px; }
+    .icon-file {
+        margin-right:16px;
+        width:17px;
+        padding:2px 0; }
+    .icon-folder {
+        width:24px;
+        padding:3px 0; }
+    #directory {
+        color:#007bff;
+        margin:10px;
+        text-decoration: underline;
+        cursor:default; }
+    #directory-wrapper {
+        display:block;
+        width:100%;
+    }
+    @keyframes fade {
+        from {opacity:0;}
+        to {opacity:1;}
+    }
+    @media screen and (max-width: 567.8px){
+        #container {
+            padding: 30px 2.5%;
+        }
+    }
+
+    @media screen and (min-width:568px) and (max-width:767.8px){
+        #container {
+            padding: 30px 3.75%;
+        }
+    }
+
+    @media screen and (min-width:768px) and (max-width:1366px){
+        #container {
+            padding: 30px 6.25%;
+        }
+    }
     </style>
     <script>
-        window.onload=()=>{request("")}
+window.onload=()=>{request("");}
 const request=(dir,returnValue)=>{let request=new XMLHttpRequest();request.open("POST","app/read.php",!0);request.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');request.onload=function(){if(this.status>=200&&this.status<400){document.getElementById("directory-wrapper").innerHTML=request.responseText;[].forEach.call(document.querySelectorAll(".tab.folder"),folder=>{let dir=folder.getAttribute("dir");let returnValue=folder.getAttribute("returnvalue");if(returnValue==undefined){returnValue=0}
 folder.addEventListener("click",()=>{requestHandle(dir,returnValue)})})}}
 request.onerror=function(){var msg='';if(request.status===0){msg='Not connect.\n Verify Network.'}else if(request.status==404){msg='Requested page not found. [404]'}else if(request.status==500){msg='Internal Server Error [500].'}else if(exception==='parsererror'){msg='Requested JSON parse failed.'}else if(exception==='timeout'){msg='Time out error.'}else if(exception==='abort'){msg='Ajax request aborted.'}else{msg='Uncaught Error.\n'+request.responseText}
